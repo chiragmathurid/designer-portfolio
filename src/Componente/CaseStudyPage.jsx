@@ -1,6 +1,7 @@
 import { FiArrowLeft, FiDribbble, FiInstagram, FiX } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { TbBrandLinkedin, TbBrandDribbble } from "react-icons/tb";
+import { useEffect } from 'react';
 
 const navItems = ['Portfolio', 'FAQ', 'Resume'];
 
@@ -20,6 +21,11 @@ const fadeUp = {
 };
 
 function CaseStudyPage({ onBack, projectType = 'ai' }) {
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
+
   // Define data for the AI command centre
   const dataAI = {
     title: 'AI Command Centre',
@@ -31,8 +37,8 @@ function CaseStudyPage({ onBack, projectType = 'ai' }) {
       { label: 'Build in', value: 'Figma', tone: 'pink' },
     ],
     sections: [
-      { src: '/AI_Command_Dashboard.png', bg: 'bg-brand-blue-light/85', alt: 'AI Command Dashboard' },
-      { src: '/Sustainability_Dashboard.png', bg: 'bg-brand-pink/55', alt: 'Sustainability Dashboard view 2' }
+      { src: '/AI_command_Center_1.png', bg: 'bg-brand-blue-light/85', alt: 'AI Command Dashboard' },
+      { src: '/AI_command_Center_2.png', bg: 'bg-brand-pink/55', alt: 'Sustainability Dashboard view 2' }
     ]
   };
 

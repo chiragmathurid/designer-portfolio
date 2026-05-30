@@ -11,7 +11,10 @@ function App() {
   const [caseStudyProject, setCaseStudyProject] = useState(null);
 
   if (caseStudyProject) {
-    return <CaseStudyPage projectType={caseStudyProject} onBack={() => setCaseStudyProject(null)} />;
+    return <CaseStudyPage projectType={caseStudyProject} onBack={() => {
+      setCaseStudyProject(null);
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }} />;
   }
 
   return (
