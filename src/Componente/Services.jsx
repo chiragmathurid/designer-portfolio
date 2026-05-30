@@ -69,7 +69,7 @@ const Services = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-3xl font-thin font-black bg-brand-yellow/60 border-2 border-transparent px-2 py-1"
+              className="text-3xl font-black bg-brand-yellow/60 border-2 border-transparent px-2 py-1"
             >
               Featured Projects
             </motion.h2>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Hero from './Componente/Hero';
 import Services from './Componente/Services';
 import Experience from './Componente/Experience';
@@ -7,25 +7,24 @@ import FAQ from './Componente/FAQ';
 import Footer from './Componente/Footer';
 import CaseStudyPage from './Componente/CaseStudyPage';
 
+// Main page - all your sections together
+const MainPage = () => (
+  <>
+    <Hero />
+    <Services />
+    <Experience />
+    <AboutMe />
+    <FAQ />
+    <Footer />
+  </>
+);
+
 function App() {
-  const [caseStudyProject, setCaseStudyProject] = useState(null);
-
-  if (caseStudyProject) {
-    return <CaseStudyPage projectType={caseStudyProject} onBack={() => {
-      setCaseStudyProject(null);
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    }} />;
-  }
-
   return (
-    <>
-      <Hero onOpenCaseStudy={setCaseStudyProject} />
-      <Services />
-      <Experience />
-      <AboutMe />
-      <FAQ />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/case-study/:type" element={<CaseStudyPage />} />
+    </Routes>
   );
 }
 

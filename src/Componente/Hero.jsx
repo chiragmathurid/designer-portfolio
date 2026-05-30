@@ -2,6 +2,7 @@ import React from 'react';
 import { FiMapPin } from 'react-icons/fi';
 import { TbBrandLinkedin, TbBrandDribbble } from "react-icons/tb";
 import { LuCalendarCheck } from "react-icons/lu";
+import { useNavigate } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 
@@ -129,7 +130,9 @@ const ProjectCard = ({
   );
 };
 
-const Hero = ({ onOpenCaseStudy }) => {
+const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <div
       className="min-h-screen bg-[#FFFEFA] text-brand-black font-sans selection:bg-brand-pink -mb-12 overflow-x-hidden"
@@ -267,7 +270,7 @@ const Hero = ({ onOpenCaseStudy }) => {
               bgColor="bg-[#FFCCF2]"
               imageSrc="/AI_Command_Dashboard.png"
               imageAlt="AI Command Dashboard"
-              onAction={() => onOpenCaseStudy('ai')}
+              onAction={() => navigate('/case-study/ai')}
             />
 
             <ProjectCard
@@ -275,7 +278,7 @@ const Hero = ({ onOpenCaseStudy }) => {
               bgColor="bg-[#CAFF7A]"
               imageSrc="/Sustainability_Dashboard.png"
               imageAlt="Sustainability Dashboard"
-              onAction={() => onOpenCaseStudy('sustainability')}
+              onAction={() => navigate('/case-study/sustainability')}
             />
 
             <ProjectCard
@@ -283,7 +286,7 @@ const Hero = ({ onOpenCaseStudy }) => {
               bgColor="bg-[#A2D2FF]"
               imageSrc="/Enterprise_CRM_Dashbaord.png"
               imageAlt="Enterprise CRM Dashboard"
-              onAction={() => onOpenCaseStudy('crm')}
+              onAction={() => navigate('/case-study/crm')}
             />
 
             <ProjectCard

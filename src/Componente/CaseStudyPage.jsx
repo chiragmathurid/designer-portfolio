@@ -2,6 +2,7 @@ import { FiArrowLeft, FiDribbble, FiInstagram, FiX } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { TbBrandLinkedin, TbBrandDribbble } from "react-icons/tb";
 import { useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const navItems = ['Portfolio', 'FAQ', 'Resume'];
 
@@ -20,7 +21,11 @@ const fadeUp = {
   },
 };
 
-function CaseStudyPage({ onBack, projectType = 'ai' }) {
+function CaseStudyPage() {
+
+  const navigate = useNavigate();                            
+  const { type } = useParams();                           
+  const projectType = type || 'ai';
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -93,7 +98,7 @@ function CaseStudyPage({ onBack, projectType = 'ai' }) {
           <div className="flex items-center justify-between gap-4">
             <button
               type="button"
-              onClick={onBack}
+              onClick={() => navigate('/')}
               className="inline-flex items-center gap-2 rounded-full border border-brand-black/70 bg-white px-3 py-1 text-sm font-medium hover:bg-brand-yellow/30"
             >
               <FiArrowLeft /> Back
