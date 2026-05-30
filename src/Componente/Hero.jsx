@@ -70,9 +70,25 @@ const Navbar = () => {
 
         {/* Middle: Links */}
         <div className="hidden md:flex items-center gap-8 font-medium text-sm">
-          {['Portfolio', 'FAQ', 'Resume'].map((item) => (
-            <a key={item} href="#" className="hover:underline decoration-2 underline-offset-4 hover:text-brand-pink transition-colors">
-              {item}
+          {[
+            { label: 'Portfolio', href: '#portfolio' },
+            { label: 'FAQ', href: '#faq' },
+            { label: 'Resume', href: 'https://drive.google.com/file/d/1xmiRowblVg7HLHHSXQW1bs2qLWkn5Jea/view?usp=share_link' },
+          ].map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              target={item.href.startsWith('#') ? '_self' : '_blank'}
+              rel="noopener noreferrer" 
+              onClick={(e) => {
+                if (item.href.startsWith('#')) {
+                  e.preventDefault();
+                  document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="hover:underline decoration-2 underline-offset-4 hover:text-brand-pink transition-colors"
+            >
+              {item.label}
             </a>
           ))}
         </div>
@@ -179,7 +195,10 @@ const Hero = () => {
               <button className="bg-brand-black text-white border-2 border-brand-black rounded-full px-6 py-2 font-medium text-sm hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none">
                 Get in Touch
               </button>
-              <button className="bg-white text-brand-black border-2 border-brand-black rounded-full px-6 py-2 font-medium text-sm hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(200,200,200,1)] hover:shadow-none">
+              <button
+                onClick={() => document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-white text-brand-black border-2 border-brand-black rounded-full px-6 py-2 font-medium text-sm hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(200,200,200,1)] hover:shadow-none"
+              >
                 See my Portfolio
               </button>
             </motion.div>
@@ -224,7 +243,7 @@ const Hero = () => {
         </motion.div>
 
         {/* --- Featured Projects Section --- */}
-        <div className="mb-32">
+        <div id="portfolio" className="mb-32">
 
           <motion.div
             initial={{ opacity: 0, x: -20 }}

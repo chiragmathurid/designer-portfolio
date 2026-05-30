@@ -10,9 +10,27 @@ const Footer = () => {
             <div className="w-full mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4 mb-16">
                 {/* Navigation Links */}
                 <nav className="flex items-center gap-8 font-bold text-lg">
-                    <a href="#portfolio" className="hover:text-brand-pink transition-colors">Portfolio</a>
-                    <a href="#faq" className="hover:text-brand-pink transition-colors">FAQ</a>
-                    <a href="#resume" className="hover:text-brand-pink transition-colors">Resume</a>
+                    {[
+                        { label: 'Portfolio', href: '#portfolio' },
+                        { label: 'FAQ', href: '#faq' },
+                        { label: 'Resume', href: 'https://drive.google.com/file/d/1xmiRowblVg7HLHHSXQW1bs2qLWkn5Jea/view?usp=share_link' },
+                    ].map((item) => (
+                        <a
+                            key={item.label}
+                            href={item.href}
+                            target={item.href.startsWith('#') ? '_self' : '_blank'}
+                            rel="noopener noreferrer"
+                            onClick={(e) => {
+                                if (item.href.startsWith('#') && item.href !== '#') {
+                                    e.preventDefault();
+                                    document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }}
+                            className="hover:text-brand-pink transition-colors"
+                        >
+                            {item.label}
+                        </a>
+                    ))}
                 </nav>
 
                 {/* Social Icons */}
@@ -55,7 +73,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 };
 

@@ -162,9 +162,29 @@ function CaseStudyPage() {
               <FiArrowLeft /> Back
             </button>
             <div className="hidden items-center gap-8 text-sm font-medium md:flex">
-              {navItems.map((item) => (
-                <a key={item} href="#" className="transition hover:opacity-70">
-                  {item}
+              {[
+                { label: 'Portfolio', target: '/#portfolio' },
+                { label: 'FAQ', target: '/#faq' },
+                { label: 'Resume', target: 'https://drive.google.com/file/d/1xmiRowblVg7HLHHSXQW1bs2qLWkn5Jea/view?usp=share_link' },
+              ].map((item) => (
+                <a
+                  key={item.label}
+                  href={item.target}
+                  target={item.target.startsWith('/') || item.target.startsWith('#') ? '_self' : '_blank'}
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    if (item.target.startsWith('/#')) {
+                      e.preventDefault();
+                      navigate('/');
+                      // Small delay lets the home page mount before scrolling
+                      setTimeout(() => {
+                        document.querySelector(item.target.replace('/', ''))?.scrollIntoView({ behavior: 'smooth' });
+                      }, 300);
+                    }
+                  }}
+                  className="transition hover:opacity-70"
+                >
+                  {item.label}
                 </a>
               ))}
             </div>

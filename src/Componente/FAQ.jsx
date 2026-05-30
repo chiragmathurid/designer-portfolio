@@ -148,7 +148,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 px-4 relative overflow-visible">
+    <section id="faq" className="py-24 px-4 relative overflow-visible">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 md:gap-16 relative">
         
         {/* --- DECORATIVE STARS (Animated Floating) --- */}
