@@ -23,9 +23,9 @@ const fadeUp = {
 
 function CaseStudyPage() {
 
-  const navigate = useNavigate();                            
-  const { type } = useParams();                           
-  const projectType = type || 'ai';
+  const navigate = useNavigate();
+  const { type } = useParams();
+  const projectType = type;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -58,12 +58,12 @@ function CaseStudyPage() {
       { label: 'Build in', value: 'Figma', tone: 'pink' },
     ],
     sections: [
-      { src: '/Sustainability_Dashboard.png', bg: 'bg-[#A2D2FF]', alt: 'Sustainability Dashboard Overview' },
+      { src: '/Sustainability_Dashboard_1.png', bg: 'bg-[#A2D2FF]', alt: 'Sustainability Dashboard Overview' },
       {
-        src: '/AI_Command_Dashboard.png', bg: 'bg-[#FFCCF2]', alt: 'Sustainability Dashboard Details',  // Re-using as placeholder image 2 from screenshot
+        src: '/Sustainability_Dashboard_2.png', bg: 'bg-[#FFCCF2]', alt: 'Sustainability Dashboard Details',  // Re-using as placeholder image 2 from screenshot
       },
       {
-        src: '/Enterprise_CRM_Dashbaord.png', bg: 'bg-[#CAFF7A]', alt: 'Sustainability Dashboard Analytics' // Re-using as placeholder image 3 from screenshot
+        src: '/Sustainability_Dashboard_3.png', bg: 'bg-[#CAFF7A]', alt: 'Sustainability Dashboard Analytics' // Re-using as placeholder image 3 from screenshot
       }
     ]
   };
@@ -80,11 +80,69 @@ function CaseStudyPage() {
     ],
     sections: [
       { src: '/Enterprise_CRM_Dashbaord.png', bg: 'bg-[#A2D2FF]', alt: 'CRM Dashboard Overview' },
-      { src: '/AI_Command_Dashboard.png', bg: 'bg-[#FFCCF2]', alt: 'CRM Dashboard Dark Theme' }
+      { src: '/Enterprise_CRM_Dashbaord_2.png', bg: 'bg-[#FFCCF2]', alt: 'CRM Dashboard Dark Theme' }
     ]
   };
 
-  const data = projectType === 'sustainability' ? dataSustainability : projectType === 'crm' ? dataCRM : dataAI;
+  // Define data for the Inventory
+  const dataInventory = {
+    title: 'Inventory Dashboard',
+    description: 'An AI-powered inventory dashboard designed to simplify stock monitoring, order tracking, and performance analysis through real-time insights and intuitive data visualization.',
+    meta: [
+      { label: 'Date', value: 'Feb, 2025', tone: 'pink' },
+      { label: 'Service', value: 'Dashboard Design', tone: 'yellow' },
+      { label: 'Client', value: 'ServiceNow', tone: 'blue' },
+      { label: 'Build in', value: 'Figma', tone: 'pink' },
+    ],
+    sections: [
+      { src: '/Inventory_Dashboard_1.png', bg: 'bg-brand-blue-light/85', alt: 'Inventory Dashboard Overview 1' },
+      { src: '/Inventory_Dashboard_2.png', bg: 'bg-brand-pink/55', alt: 'Inventory Dashboard Details 2' },
+      { src: '/Inventory_Dashboard_3.png', bg: 'bg-brand-blue-light/85', alt: 'Inventory Dashboard Details 3' },
+      { src: '/Inventory_Dashboard_4.png', bg: 'bg-brand-pink/55', alt: 'Inventory Dashboard Details 4' },
+      { src: '/Inventory_Dashboard_5.png', bg: 'bg-brand-blue-light/85', alt: 'Inventory Dashboard Details 5' },
+    ]
+  };
+
+  //Define data for the Aroma
+  const dataAroma = {
+    title: 'Aroma Cafe',
+    description: 'A premium cafe website concept crafted to blend aesthetics with usability, featuring menu highlights, product discovery, and an immersive coffee-inspired visual experience.',
+    meta: [
+      { label: 'Date', value: 'Feb, 2025', tone: 'pink' },
+      { label: 'Service', value: 'Web Design', tone: 'yellow' },
+      { label: 'Client', value: 'Aroma Cafe', tone: 'blue' },
+      { label: 'Build in', value: 'Figma', tone: 'pink' },
+    ],
+    sections: [
+      { src: '/aroma_cafe.png', bg: 'bg-brand-blue-light/85', alt: 'Inventory Dashboard Overview' },
+    ]
+  };
+
+  //Define data for the Video Convertor
+  const dataVideo = {
+    title: '3D Video Convertor App',
+    description: 'An app with a simple, user-friendly interface for all ages to easily convert 2D videos into 3D. It offers trim/edit tools, video status tracking, advanced editing options, and high-quality output in multiple formats.',
+    meta: [
+      { label: 'Date', value: 'Nov, 2023', tone: 'pink' },
+      { label: 'Service', value: 'App Design', tone: 'yellow' },
+      { label: 'Client', value: 'Assignment', tone: 'blue' },
+      { label: 'Build in', value: 'Figma', tone: 'pink' },
+    ],
+    sections: [
+      { src: '/video_convertor.png', bg: 'bg-[#CAFF7A]', alt: 'Video Convertor App Overview' },
+    ]
+  };
+
+  const dataMap = {
+    ai: dataAI,
+    sustainability: dataSustainability,
+    crm: dataCRM,
+    inventory: dataInventory,
+    aroma: dataAroma,
+    video: dataVideo,
+  };
+
+  const data = dataMap[projectType] || dataAI;
 
   return (
     <div className="text-brand-black">

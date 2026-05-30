@@ -290,18 +290,20 @@ const Hero = () => {
             />
 
             <ProjectCard
-              title="Fortune Case Study"
-              bgColor="bg-[#FFCCF2]"
-              imageSrc="/Fortune_Case_Study.png"
-              imageAlt="Fortune Case Study"
-              buttonText="See Case Study"
-            />
-
-            <ProjectCard
               title="Inventory Dashboard"
               bgColor="bg-[#A2D2FF]"
               imageSrc="/Inventory_Dashboard.png"
               imageAlt="Inventory Dashboard"
+              onAction={() => navigate('/case-study/inventory')}
+            />
+
+            <ProjectCard
+              title="Aroma Cafe"
+              bgColor="bg-[#FFCCF2]"
+              imageSrc="/aroma_cafe_overview.png"
+              imageAlt="Aroma Cafe Overview"
+              // buttonText="See Case Study"
+              onAction={() => navigate('/case-study/aroma')}
             />
 
             <ProjectCard
@@ -309,6 +311,7 @@ const Hero = () => {
               bgColor="bg-[#CAFF7A]"
               imageSrc="/Video_Convertor_App.png"
               imageAlt="Video Convertor App"
+              onAction={() => navigate('/case-study/video')}
             />
 
           </motion.div>
