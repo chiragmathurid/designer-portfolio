@@ -83,21 +83,27 @@ const ExperienceCard = ({ date, title, description, color }) => {
 
 const Experience = () => {
   const experiences = [
-    {
-      date: "May 2025 - Present",
-      title: "UX Designer at JobTwine Inc",
-      description: "I lead end-to-end UX for an AI-powered SaaS hiring platform, designing recruiter and candidate workflows across web dashboards. I simplify complex hiring journeys, create scalable design systems, and collaborate closely with product and engineering to deliver intuitive, production-ready experiences focused on clarity, accessibility, and usability.",
+     {
+      date: "April 2026 - Present",
+      title: "UI Designer at Lyzr AI",
+      description: "As a UI Designer at Lyzr AI, I craft intuitive interfaces for agentic workflows, AI automation, and smart dashboards. I simplify complex AI interactions, create scalable design systems, and work closely with product and engineering to deliver seamless, user-centric experiences.",
       color: "bg-[#8FD3F4]" // Light Blue
+    },
+    {
+      date: "May 2025 - April 2026",
+      title: "UX Designer at JobTwine",
+      description: "I lead end-to-end UX for an AI-powered hiring platform, designing intuitive recruiter and candidate workflows. I simplify complex journeys, build scalable design systems, and collaborate with product and engineering to deliver clear, accessible, and user-friendly experiences.",
+      color: "bg-[#D1FF8C]" // Light Green
     },
     {
       date: "Oct 2023 - Apr 2025",
       title: "UX/UI Designer at Simpliaxis.",
-      description: "Designed user experiences for ed-tech and business platforms, focusing on usability, structured information architecture, and responsive web interfaces. Created wireframes, user flows, and high-fidelity UI while collaborating cross-functionally to align design decisions with business and product goals.",
+      description: "Designed UX for Ed-tech and business platforms, focusing on usability and structured information architecture. Created wireframes, user flows, and high-fidelity UI while collaborating with cross-functional teams to align with product and business goals.",
       color: "bg-[#FFF59E]" // Light Yellow
     },
     {
       date: "May 2023 - Sep 2023",
-      title: "Design Intern at JobTwine Inc",
+      title: "UX Intern at JobTwine",
       description: "Contributed to user flows, wireframes, and UI improvements for a SaaS hiring platform, collaborating closely with product and engineering.",
       color: "bg-[#FFCcf2]" // Light Pink
     }
