@@ -63,7 +63,7 @@ const Navbar = () => {
         {/* Left: Logo */}
         <motion.div
           whileHover={{ rotate: 2, scale: 1.05 }}
-          className="bg-[#ffd6ed] px-3 py-1 font-bold text-base tracking-tight cursor-default"
+          className="bg-[#ffd6ed] px-2 py-1 font-semibold text-xl tracking-tight cursor-default"
         >
           Krishna
         </motion.div>
@@ -86,7 +86,7 @@ const Navbar = () => {
                   document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="hover:underline decoration-2 underline-offset-4 hover:text-brand-pink transition-colors"
+              className="text-base hover:underline decoration-2 underline-offset-4 hover:text-brand-pink transition-colors"
             >
               {item.label}
             </a>
@@ -137,7 +137,7 @@ const ProjectCard = ({
         <button
           type="button"
           onClick={onAction}
-          className="bg-white border-[1.2px] border-brand-black rounded-full px-5 py-1 text-sm font-medium hover:-translate-y-0.5 transition-transform"
+          className="bg-white border-[1.2px] border-brand-black rounded-full px-5 py-3 text-base font-medium hover:-translate-y-0.5 transition-transform"
         >
           {buttonText}
         </button>
@@ -175,7 +175,7 @@ const Hero = () => {
           <div className="w-full md:w-1/2 flex flex-col items-start z-10 pl-2">
 
             {/* "Available for work" Badge */}
-            <motion.div variants={fadeInUp} className="bg-white text-sm flex items-center gap-2 font-medium shadow-sm mb-5">
+            <motion.div variants={fadeInUp} className="bg-white text-lg flex items-center gap-2 font-medium shadow-sm mb-5">
               <LuCalendarCheck size={20} className="stroke-[2px]" />
               <span>Available for work</span>
             </motion.div>
@@ -192,18 +192,18 @@ const Hero = () => {
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex items-center gap-4 mb-10">
-              <button onClick={() => navigate('/contact')} className="bg-brand-black text-white border-2 border-brand-black rounded-full px-6 py-2 font-medium text-sm hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none">
+              <button onClick={() => navigate('/contact')} className="bg-brand-black text-white border-2 border-brand-black rounded-full px-6 py-4 font-medium text-base hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none">
                 Contact Me!
               </button>
               <button
                 onClick={() => document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-brand-black border-2 border-brand-black rounded-full px-6 py-2 font-medium text-sm hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(200,200,200,1)] hover:shadow-none"
+                className="bg-white text-brand-black border-2 border-brand-black rounded-full px-6 py-4 font-medium text-base hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(200,200,200,1)] hover:shadow-none"
               >
                 See my Portfolio
               </button>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="flex items-center gap-2 font-medium text-gray-700 text-sm">
+            <motion.div variants={fadeInUp} className="flex items-center gap-2 font-medium text-gray-700 text-lg">
               <FiMapPin size={20} className="stroke-[2px]" />
               <span>Bangalore, Karnataka</span>
             </motion.div>
@@ -267,7 +267,7 @@ const Hero = () => {
               strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="absolute -left-10 top-20 w-16 h-50 text-brand-black -rotate-45"
+              className="absolute -left-2 top-18 w-16 h-50 text-brand-black -rotate-45"
             >
               <path d="M35,5 C35,5 10,25 10,55" />
               <path d="M10,55 L5,45" />
@@ -321,7 +321,6 @@ const Hero = () => {
               bgColor="bg-[#FFCCF2]"
               imageSrc="/aroma_cafe_overview.png"
               imageAlt="Aroma Cafe Overview"
-              // buttonText="See Case Study"
               onAction={() => navigate('/case-study/aroma')}
             />
 
@@ -334,16 +333,6 @@ const Hero = () => {
             />
 
           </motion.div>
-
-          <div className="flex justify-center mt-16">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white border-[1.2px] border-brand-black text-brand-black rounded-full px-8 py-2 text-sm font-medium hover:bg-gray-50 transition-all font-sans"
-            >
-              View More
-            </motion.button>
-          </div>
         </div>
 
       </main>

@@ -120,7 +120,7 @@ const Experience = () => {
         <motion.div 
           variants={floatVariant(0)}
           animate="animate"
-          className="hidden md:block absolute -left-32 top-0 text-[#FFCcf2]"
+          className="hidden md:block absolute -left-1 top-0 text-[#FFCcf2]"
         >
            <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
@@ -131,7 +131,7 @@ const Experience = () => {
         <motion.div 
           variants={floatVariant(1.5)}
           animate="animate"
-          className="hidden md:block absolute -left-20 bottom-10 text-[#FFF59E]"
+          className="hidden md:block absolute left-20 bottom-10 text-[#FFF59E]"
         >
             <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
@@ -142,7 +142,7 @@ const Experience = () => {
         <motion.div 
           variants={floatVariant(0.5)}
           animate="animate"
-          className="hidden md:block absolute -right-32 top-1/3 text-[#8FD3F4]"
+          className="hidden md:block absolute -right-10 top-1/3 text-[#8FD3F4]"
         >
             <svg width="55" height="55" viewBox="0 0 24 24" fill="currentColor">
                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
@@ -173,7 +173,7 @@ const Experience = () => {
               strokeWidth="2.5" 
               strokeLinecap="round" 
               strokeLinejoin="round"
-              className="absolute left-10 top-16 w-16 h-50 text-brand-black -rotate-90"
+              className="absolute left-10 top-110 w-16 h-50 text-brand-black -rotate-90"
             >
               {/* The main curve */}
               <motion.path variants={drawPath} d="M35,5 C35,6 7,15 10,65" />

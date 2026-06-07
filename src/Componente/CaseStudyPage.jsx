@@ -251,7 +251,7 @@ function CaseStudyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.55 }}
-            className={`mt-${index === 0 ? '14' : '8'} mt-10 rounded-[2px] border border-brand-black/50 ${section.bg} p-4 md:p-6 lg:p-10`}
+            className={`mt-${index === 0 ? '14' : '8'} mt-10 rounded-[2px] ${section.bg} p-4 md:p-6 lg:p-10`}
           >
             <motion.img
               src={section.src}

@@ -73,7 +73,7 @@ const frontCard = {
 
 const AboutMe = () => {
   return (
-    <section className="py-24 px-4 bg-[#FFFEFA] overflow-hidden">
+    <section className="py-24 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24">
         
         {/* --- LEFT SIDE: Image Stack --- */}
@@ -87,7 +87,7 @@ const AboutMe = () => {
                     viewport={{ once: true }}
                     className="relative inline-block"
                 >
-                    <h2 className="text-3xl font-bold bg-[#FFF59E] border-2 border-transparent px-3 py-1 text-brand-black">
+                    <h2 className="mt-10 text-3xl font-bold bg-[#FFF59E] border-2 border-transparent px-3 py-1 text-brand-black">
                       About Me
                     </h2>
                     
