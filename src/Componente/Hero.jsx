@@ -193,7 +193,7 @@ const Hero = () => {
 
             <motion.div variants={fadeInUp} className="flex items-center gap-4 mb-10">
               <button className="bg-brand-black text-white border-2 border-brand-black rounded-full px-6 py-2 font-medium text-sm hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none">
-                Get in Touch
+                Contact Me!
               </button>
               <button
                 onClick={() => document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' })}

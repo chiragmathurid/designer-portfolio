@@ -2,6 +2,7 @@ import React from 'react';
 import { FiX, FiInstagram, FiZap } from 'react-icons/fi';
 import { FaDribbble } from 'react-icons/fa'; // Using FaDribbble for the icon
 import { SiFramer } from 'react-icons/si'; // Using SiFramer for the icon
+import { TbBrandLinkedin, TbBrandDribbble } from "react-icons/tb";
 
 const Footer = () => {
     return (
@@ -35,9 +36,8 @@ const Footer = () => {
 
                 {/* Social Icons */}
                 <div className="flex items-center gap-6 text-2xl">
-                    <a href="#" className="hover:text-brand-pink transition-colors"><FiX /></a>
-                    <a href="#" className="hover:text-brand-pink transition-colors"><FaDribbble /></a>
-                    <a href="#" className="hover:text-brand-pink transition-colors"><FiInstagram /></a>
+                    <a href='https://www.linkedin.com/in/krishnasharma28' target='_blank'><TbBrandLinkedin size={26} className="cursor-pointer hover:scale-110 transition-transform stroke-[1.7px]" /></a>
+                    <a href='https://dribbble.com/Krishna2804' target='_blank'><TbBrandDribbble size={26} className="cursor-pointer hover:scale-110 transition-transform stroke-[1.7px]" /></a>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@ const Footer = () => {
                     Let’s make something incredible together! Reach out to discuss your project, and let’s create designs that resonate and inspire.
                 </p>
                 <button className="bg-white text-brand-black rounded-full px-10 py-4 font-bold text-lg hover:scale-105 transition-transform">
-                    Hire Me!
+                    Contact Me!
                 </button>
             </div>
 
@@ -58,19 +58,7 @@ const Footer = () => {
             <div className="w-full mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 {/* Copyright */}
                 <div className="font-bold text-sm md:text-base">
-                    Monica ©all rights reserved
-                </div>
-
-                {/* Template & Framer Buttons */}
-                <div className="flex items-center gap-4">
-                    <a href="#" className="bg-white text-brand-black rounded-full px-4 py-2 font-bold text-sm flex items-center gap-2 hover:scale-105 transition-transform">
-                        <FiZap className="text-brand-black" />
-                        Get Template
-                    </a>
-                    <a href="#" className="bg-white text-brand-black rounded-full px-4 py-2 font-bold text-sm flex items-center gap-2 hover:scale-105 transition-transform">
-                        <SiFramer className="text-brand-black" />
-                        Made in Framer
-                    </a>
+                    Krishna © all rights reserved
                 </div>
             </div>
         </footer >

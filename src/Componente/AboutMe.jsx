@@ -88,7 +88,7 @@ const AboutMe = () => {
                     className="relative inline-block"
                 >
                     <h2 className="text-3xl font-bold bg-[#FFF59E] border-2 border-transparent px-3 py-1 text-brand-black">
-                      Who I Am?
+                      About Me
                     </h2>
                     
                     {/* Hand Drawn Arrow - Animated */}

@@ -75,7 +75,7 @@ function CaseStudyPage() {
     meta: [
       { label: 'Date', value: 'Feb, 2025', tone: 'pink' },
       { label: 'Service', value: 'Dashboard Design', tone: 'yellow' },
-      { label: 'Client', value: 'Greenstitch', tone: 'blue' },
+      { label: 'Client', value: 'Superleap', tone: 'blue' },
       { label: 'Build in', value: 'Figma', tone: 'pink' },
     ],
     sections: [
@@ -129,7 +129,7 @@ function CaseStudyPage() {
       { label: 'Build in', value: 'Figma', tone: 'pink' },
     ],
     sections: [
-      { src: '/video_convertor.png', bg: 'bg-[#CAFF7A]', alt: 'Video Convertor App Overview' },
+      { src: '/video_convertor.png', bg: '', alt: 'Video Convertor App Overview' },
     ]
   };
 
@@ -256,7 +256,7 @@ function CaseStudyPage() {
             <motion.img
               src={section.src}
               alt={section.alt}
-              className="w-full rounded-xl border border-brand-black/70 shadow-sm"
+              className="w-full rounded-xl shadow-sm"
               whileHover={{ scale: 1.012 }}
               transition={{ duration: 0.28 }}
             />
