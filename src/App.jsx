@@ -6,6 +6,7 @@ import AboutMe from './Componente/AboutMe';
 import FAQ from './Componente/FAQ';
 import Footer from './Componente/Footer';
 import CaseStudyPage from './Componente/CaseStudyPage';
+import ContactPage from './Componente/ContactPage';
 
 // Main page - all your sections together
 const MainPage = () => (
@@ -24,6 +25,7 @@ function App() {
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/case-study/:type" element={<CaseStudyPage />} />
+      <Route path='/contact' element={<ContactPage />} />
     </Routes>
   );
 }

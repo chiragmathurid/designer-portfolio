@@ -3,8 +3,10 @@ import { FiX, FiInstagram, FiZap } from 'react-icons/fi';
 import { FaDribbble } from 'react-icons/fa'; // Using FaDribbble for the icon
 import { SiFramer } from 'react-icons/si'; // Using SiFramer for the icon
 import { TbBrandLinkedin, TbBrandDribbble } from "react-icons/tb";
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+    const navigate = useNavigate();
     return (
         <footer className="bg-brand-black rounded-t-xl text-white font-sans pt-8 pb-4">
             {/* Top Navigation & Icons */}
@@ -49,7 +51,7 @@ const Footer = () => {
                 <p className="text-lg md:text-xl max-w-2xl mb-10 leading-relaxed text-white/90">
                     Let’s make something incredible together! Reach out to discuss your project, and let’s create designs that resonate and inspire.
                 </p>
-                <button className="bg-white text-brand-black rounded-full px-10 py-4 font-bold text-lg hover:scale-105 transition-transform">
+                <button onClick={()=>navigate('/contact')} className="bg-white text-brand-black rounded-full px-10 py-4 font-bold text-lg hover:scale-105 transition-transform">
                     Contact Me!
                 </button>
             </div>

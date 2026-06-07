@@ -79,7 +79,7 @@ const Navbar = () => {
               key={item.label}
               href={item.href}
               target={item.href.startsWith('#') ? '_self' : '_blank'}
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
               onClick={(e) => {
                 if (item.href.startsWith('#')) {
                   e.preventDefault();
@@ -192,7 +192,7 @@ const Hero = () => {
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex items-center gap-4 mb-10">
-              <button className="bg-brand-black text-white border-2 border-brand-black rounded-full px-6 py-2 font-medium text-sm hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none">
+              <button onClick={() => navigate('/contact')} className="bg-brand-black text-white border-2 border-brand-black rounded-full px-6 py-2 font-medium text-sm hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none">
                 Contact Me!
               </button>
               <button
