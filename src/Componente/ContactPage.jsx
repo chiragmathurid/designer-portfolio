@@ -136,7 +136,7 @@ const ContactPage = () => {
                             </span>
                             <a
                                 href="mailto:krishnasharma@gmail.com"
-                                className="flex items-center gap-3 text-lg font-medium hover:text-brand-pink transition-colors group"
+                                className="flex items-center gap-3 text-lg font-medium hover:text-[#7BD4FF] transition-colors group"
                             >
                                 <FiMail size={20} className="stroke-[2px] group-hover:scale-110 transition-transform" />
                                 krishna28.id@gmail.com
@@ -156,7 +156,7 @@ const ContactPage = () => {
                                     className="flex items-center gap-2 text-lg font-medium hover:text-brand-pink transition-colors group"
                                 >
                                     <TbBrandLinkedin size={22} className="stroke-[2px] group-hover:scale-110 transition-transform" />
-                                    @krishnasharma28 {/* 👈 replace */}
+                                    @krishnasharma28 
                                 </a>
                                 <a
                                     href="https://dribbble.com/Krishna2804"

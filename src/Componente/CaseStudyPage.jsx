@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { TbBrandLinkedin, TbBrandDribbble } from "react-icons/tb";
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import Footer from './Footer';
 
 const navItems = ['Portfolio', 'FAQ', 'Resume'];
 
@@ -264,7 +265,8 @@ function CaseStudyPage() {
         ))}
       </main>
 
-      <motion.footer
+      <Footer />
+      {/* <motion.footer
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -303,7 +305,7 @@ function CaseStudyPage() {
             </p>
           </div>
         </div>
-      </motion.footer>
+      </motion.footer> */}
     </div>
   );
 }
